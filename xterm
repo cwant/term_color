@@ -1,9 +1,9 @@
 #!/bin/sh
 
 if [ -n "$1" ]; then
-    color=`/usr/bin/python /home/cwant/bin/xterm_color.py --favour $1`
+    color=`/usr/bin/python3 /home/cwant/bin/xterm_color.py --favour $1`
 else
-        color=`/usr/bin/python /home/cwant/bin/xterm_color.py`
+        color=`/usr/bin/python3 /home/cwant/bin/xterm_color.py`
 fi
 
 # Font face option

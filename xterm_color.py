@@ -25,18 +25,18 @@ def main():
     c = get_color(min_c1, max_c1)
 
   if (options.favour == "red"):
-    print "rgb:%02x/%02x/%02x" % (c[0],c[1],c[2])
+    print("rgb:%02x/%02x/%02x" % (c[0],c[1],c[2]))
   elif (options.favour == "green"):
-    print "rgb:%02x/%02x/%02x" % (c[1],c[0],c[2])
+    print("rgb:%02x/%02x/%02x" % (c[1],c[0],c[2]))
   elif (options.favour == "blue"):
-    print "rgb:%02x/%02x/%02x" % (c[1],c[2],c[0])
+    print("rgb:%02x/%02x/%02x" % (c[1],c[2],c[0]))
   elif (options.favour == "magenta"):
-    print "rgb:%02x/%02x/%02x" % (c[0],c[2],c[1])
+    print("rgb:%02x/%02x/%02x" % (c[0],c[2],c[1]))
   elif (options.favour == "cyan"):
-    print "rgb:%02x/%02x/%02x" % (c[2],c[0],c[1])
+    print("rgb:%02x/%02x/%02x" % (c[2],c[0],c[1]))
   else:
     o = rand_order()
-    print "rgb:%02x/%02x/%02x" % (c[o[0]],c[o[1]],c[o[2]])
+    print("rgb:%02x/%02x/%02x" % (c[o[0]],c[o[1]],c[o[2]]))
 
 def get_color(mn, mx):
   # c1 is highest, then c2, then c3
