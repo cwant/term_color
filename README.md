@@ -1,23 +1,36 @@
-# xterm_color
-Colorful/Colourful Xterms
+# `term_color`
 
-I like xterms to have light text on a dark background. Since I usually have a lot of xterms open, I like them to have random colors for visual texture (the main requirement is that the background must be dark). This program is a wrapper for xterm that generates each new xterm with a different random color (random, but the overall hue of the xterm can be gamed).
+Colorful/Colourful terminals
+
+I like terminals to have light text on a dark background.
+Since I usually have a lot of them open, I like them the backgrounds of
+my terminals to have random colors for visual texture
+(the main requirement is that the background must be dark).
+This software provides wrappers for `xterm` and `xfce4-terminal`
+that generate each new terminal with a different random color
+(random, but the overall hue of the terminal can be gamed).
 
 ## Installation
 
-You will want to have xterm and python installed. This program assumes that xterm is installed at <code>/usr/bin/xterm</code> and python is installed at <code>/usr/bin/python</code>.
+You will want to have `python` installed, and also `xterm` or
+`xfce4-terminal`. This program assumes the terminals are installed
+in `/usr/bin`.
 
-Create symbolic links from both 'xterm' and xterm_color.py to a place in your path that has higher priority than the location of your system xterm program. Alternatively, put this repository in your path.
+Create symbolic links for either `xterm` or `xfce4-terminal` in this
+repository, and place them in your path in a place that has higher
+priority than the location of your system terminal programs.
+Alternatively, put this repository in your path.
 
 ## Usage
 
-Call xterm: <code>$ xterm &</code>. You now have an xterm with a random background color.
+Call `xterm` or `xfce4-terminal`, e.g., `xterm &`.
+You now have an `xterm` with a random background color.
 
-Want your background hue to be weighted towards being bluish? Try: <code>$ xterm blue &</code>
-Want another blue xterm, but with a different color than the last one? Just run the above command again.
+Want your background hue to be weighted towards being bluish?
+Try: `xfce4-terminal blue &`
 
-Try the above replacing <code>blue</code> with <code>red</code>, <code>green</code>, or <code>grey</code>.
+Want another blue xterm, but with a different color than the last one?
+Just run the above command again.
 
-## Disclaimer
-
-This software is tailored pretty closely to my own personal needs. If somebody feels that this program is useful, I could spend some time making it more robust.
+Try the above replacing `blue` with `red`, `green`, `grey`,
+`cyan` or `magenta`.

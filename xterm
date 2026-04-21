@@ -1,14 +1,18 @@
-#!/bin/sh
+#!/bin/bash
+
+PYTHON=$(type -p python3)
+SCRIPT="$(dirname $(realpath $0))/term_color.py"
+TERM_PROG=/usr/bin/xterm
 
 if [ -n "$1" ]; then
-    color=`/usr/bin/python3 /home/cwant/bin/xterm_color.py --favour $1`
+  color=`$PYTHON $SCRIPT --favour $1 --xterm`
 else
-        color=`/usr/bin/python3 /home/cwant/bin/xterm_color.py`
+  color=`$PYTHON $SCRIPT --xterm`
 fi
 
 # Font face option
 #  -fa "Liberation Mono:size=10:antialias=false" \
 
-exec /usr/bin/xterm \
+exec $TERM_PROG \
   -fn 10x20 \
   -bg $color -fg rgb:e0/e0/e0 -sl 500 +rv -vb &

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+PYTHON=$(type -p python3)
+SCRIPT="$(dirname $(realpath $0))/term_color.py"
+TERM_PROG=/usr/bin/xfce4-terminal
+
+if [ -n "$1" ]; then
+  color=`$PYTHON $SCRIPT --favour $1 --xfce4`
+else
+  color=`$PYTHON $SCRIPT --xfce4`
+fi
+
+exec $TERM_PROG --color-bg=$color &
